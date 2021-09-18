@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+
+$ubuntu : 'Ubuntu', sans-serif;
+$overpass : 'Overpass', sans-serif;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-bottom-left-radius: 100px;
+    .content {
+        width: 100%;
+        height: 100%;
+        background-image: url("images/bg-pattern-intro.svg");
+        background-size: 170%;
+        background-position-y: -1530px;
+        background-repeat: no-repeat;
+        nav {
+            ul {
+                list-style-type: none;
+                width: 100%;
+                overflow: hidden;
+                display: block;
+                padding: 10px 200px;
+                margin: 0;
+                .bars {
+                    font-size: 40px;
+                    font-weight: bolder;
+                    display: none;
+                    float: right;
+                    &:hover {
+                        text-decoration: none;
+                        background-color: white;
+                        color: hsl(353, 100%, 62%);
+                    }
+                }
+                li {
+                    float: left;
+                    &:first-child {
+                        a {
+                            font-size: 30px;
+                            font-weight: bolder;
+                            height: 1.3em;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    &:nth-child(5) {
+                        float: right;
+                        a {
+                            background-color: white;
+                            border-radius: 50px;
+                            padding: 10px 30px;
+                            color: hsl(353, 100%, 62%);
+                            font-weight: bolder;
+                            &:hover {
+                                text-decoration: none;
+                                background-color: hsl(353, 100%, 62%);
+                                color: white;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    &:nth-child(6) {
+                        float: right;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 14px;
+                        padding: 10px 20px;
+                        display: inline-block;
+                        font-family: $ubuntu;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 3em;
+                        font-weight: bolder;
+                        position: relative;
+                        i {
+                            padding-left: 10px;
+                        }
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .dropdown {
+                        position: absolute;
+                        padding: 10px;
+                        background-color: white;
+                        z-index: 1;
+                        display: none;
+                        border-radius: 20px;
+                        a {
+                            color: black;
+                            text-align: left;
+                            font-weight: lighter;
+                            &:hover {
+                                text-decoration: none;
+                                font-weight: bolder;
+                            }
+                        }
+                    }
+                    &:hover .dropdown {
+                        display: block;
+                    }
+                }
+            }
+        }
+        h1 {
+            text-align: center;
+            font-family: $overpass;
+            color: white;
+            font-size: 50px;
+            padding-top: 30px;
+        }
+        p {
+            text-align: center;
+            font-family: $overpass;
+            color: white;
+            font-size: 20px;
+            padding: 10px 0;
+        }
+        button {
+            font-family: $ubuntu;
+            font-size: 15px;
+            display: inline-block;
+            margin: 5px;
+            padding: 16px 20px;
+            border: none;
+            font-weight: bolder;
+            border-radius: 50px;
+        }
+        .white {
+            background-color: white;
+            color: hsl(353, 100%, 62%);
+            &:hover {
+                background-color: hsl(353, 100%, 62%);
+                color: white;
+                cursor: pointer;
+            }
+        }
+        .trans {
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            &:hover {
+                background-color: white;
+            color: hsl(353, 100%, 62%);
+                cursor: pointer;
+            }
+        }
+    }
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+.design {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .design-left {
+        width: 60%;
+        padding-left: 80px;
+        img {
+            display: none;
+            width: 100%;
+        }
+        h1 {
+            transform: translateX(50%);
+            font-family: $ubuntu;
+            font-size: 40px;
+            color: hsl(208, 49%, 24%);
+            padding-bottom: 50px;
+        }
+        h2 {
+            font-family: $ubuntu;
+            color: hsl(208, 49%, 24%);
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        p {
+            font-family: $ubuntu;
+            color: hsl(208, 49%, 24%);
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .design-right {
+        width: 40%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.state {
+    width: 100%;
+    height: 40vh;
+    background-color: hsl(237, 17%, 21%);
+    background-image: url('images/bg-pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position-y: 70%;
+    .state-img {
+        width: 45%;
+        transform: translateY(-100px);
+        float: left;
+        img {
+            max-width: 100%;
+        }  
+    }
+    .article {
+        width: 55%;
+        height: 100%;
+        float: right;
+        h1 {
+            color: white;
+            font-family: $ubuntu;
+            font-size: 35px;
+            padding: 50px 0 0 50px;
+        }
+        p {
+            color: hsl(240, 2%, 79%);
+            font-family: $overpass;
+            font-size: 20px;
+            padding: 20px 0 0 50px;
+        }
+    }
+}
+
+.laptop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .laptop-right {
+        width: 60%;
+        padding-left: 80px;
+        .Mobile-laptop-img {
+            display: none;
+        }
+        h1 {
+            transform: translateX(50%);
+            font-family: $ubuntu;
+            font-size: 40px;
+            color: hsl(208, 49%, 24%);
+            padding-bottom: 50px;
+        }
+        h2 {
+            font-family: $ubuntu;
+            color: hsl(208, 49%, 24%);
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        p {
+            font-family: $ubuntu;
+            color: hsl(208, 49%, 24%);
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .laptop-left {
+        width: 40%;
+        height: 100%;
+        overflow: hidden;
+        img {
+            transform: translateX(-300px);
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 50vh;
+    background-color: hsl(240, 10%, 16%);
+    border-top-right-radius: 100px;
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 80px;
+        .column {
+            flex: 25%;
+            min-width: 25%;
+            span {
+                color: white;
+                font-size: 30px;
+                font-family: $ubuntu;
+            }
+            a {
+                color: hsl(240, 2%, 79%);
+                font-family: $ubuntu;
+                padding: 10px;
+                display: block;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+            p {
+                color: white;
+                font-size: 16px;
+                font-family: $ubuntu;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+
+.mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    .mobile-menu {
+        width: 100%;
+        height: 60vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding-top: 20px;
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 16px;
+            &:hover {
+                background-color: tomato;
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                a {
+                    font-family: $ubuntu;
+                    font-weight: bolder;
+                    font-size: 20px;
+                    position: relative;
+                    text-decoration: none;
+                    display: block;
+                    padding: 10px 0;
+                    i {
+                        color: hsl(353, 100%, 62%);
+                    }
+                }
+                .mobile-dropdown {
+                    background-color: rgb(233, 233, 233);
+                    border-radius: 20px;
+                    display: none;
+                    p {
+                        padding: 16px 50px;
+                        font-family: $ubuntu;
+                        font-weight: bolder;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1562px) {
+    .state {
+        .article {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 1562px) {
+    .state {
+        height: 30vh;
+        img {
+            width: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .header {
+        height: 30vh;
+        .content {
+            background-size: 150%;
+            background-position-y: -500px;
+            background-position-x: -100px;
+            nav {
+                ul {
+                    .bars {
+                        display: block;
+                    }
+                    li {
+                        display: none;
+                        &:first-child {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .design {
+        display: block;
+        .design-left {
+            width: 100%;
+            padding: 20px;
+            img {
+                display: block;
+                padding-bottom: 20px;
+            }
+            h1 {
+                transform: translateX(0);
+                text-align: center;
+                padding-top: 50px;
+            }
+            h2, p {
+                text-align: center;
+            }
+        }
+        .design-right {
+            display: none;
+        }
+    }
+    .laptop {
+        display: block;
+        .laptop-right {
+            width: 100%;
+            padding: 20px;
+            .Mobile-laptop-img {
+                display: block;
+                padding-bottom: 20px;
+                width: 100%;
+            }
+            h1 {
+                transform: translateX(0);
+                text-align: center;
+                padding-top: 50px;
+            }
+            h2, p {
+                text-align: center;
+            }
+        }
+        .laptop-left {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .state {
+        height: 60vh;
+        background-position-y: center;
+        .state-img {
+            width: 100%;
+        }
+        .article {
+            width: 100%;
+            height: auto;
+            transform: translateY(-90px);
+        }
+    }
+}
+
+@media screen and (max-width: 672px) {
+    .footer {
+        height: 80vh;
+        .grid {
+            .column {
+                flex: 100%;
+                min-width: 100%;
+                text-align: center;
+                padding-top: 50px;
+                span {
+                    padding-bottom: 50px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
