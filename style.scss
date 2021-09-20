@@ -509,3 +509,60 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 2034px) {
+    .header {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 1554px) {
+    .header {
+        height: 30vh;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .header {
+        .content {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .header {
+        .content {
+            background-size: 150%;
+            background-position-y: -300px;
+            background-position-x: -100px;
+            nav {
+                ul {
+                    padding: 10px 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 382px) {
+    .header {
+        height: 40vh;
+        .content {
+            background-size: 150%;
+            background-position-y: -100px;
+            background-position-x: -100px;
+            nav {
+                ul {
+                    padding: 10px;
+                }
+            }
+            button {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
+}
